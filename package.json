@@ -1,0 +1,10 @@
+{
+  "name": "@quiz/tracking-analytics",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Optional error tracking (Sentry) and analytics (PostHog). Delete this folder and the app runs without them.",
+  "peerDependencies": {
+    "@sentry/nextjs": "^11.5.0",
+    "posthog-js": "^1.438.3"
+  }
+}
