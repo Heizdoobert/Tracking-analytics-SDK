@@ -8,7 +8,7 @@ Nothing checks for the folder at runtime.
 | File | Role |
 |---|---|
 | `src/sentry.ts` | Real `captureException` and `initSentry` (the only `@sentry/nextjs` import in the app) |
-| `src/posthog.ts` | Real `PHProvider` and `posthog`, and the `posthog.init` call (the only `posthog-js` import in the app) |
+| `src/posthog.ts` | Real `PHProvider`: renders its children, then loads `posthog-js` after hydration and runs `posthog.init` once (the only `posthog-js` import in the app). Lazy so the ~100 kB gzip library stays out of first-load scripts |
 | `next.mjs` | `withTrackingAnalytics(nextConfig)`: both aliases plus `withSentryConfig` |
 
 `sdk/` is the home for optional SDK modules; add the next one as `sdk/<name>/` in the same shape.
