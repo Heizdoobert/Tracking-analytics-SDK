@@ -1,9 +1,9 @@
-# sdk/tracking-analytics
+# Tracking Analytics SDK (@quiz/tracking-analytics)
 
-Optional error tracking (Sentry) and analytics (PostHog). The app imports from `@/lib/sdk/sentry` and
-`@/lib/sdk/posthog`, which are no-ops. When this folder exists, `next.config.mjs` loads `next.mjs`, which
+Optional error tracking (Sentry) and analytics (PostHog) SDK module. The app imports from `@/lib/sdk/sentry` and
+`@/lib/sdk/posthog`, which are no-ops. When this SDK module is installed, `next.config.mjs` loads `next.mjs`, which
 aliases those two modules to `src/sentry.ts` and `src/posthog.ts` and applies Sentry's build config.
-Nothing checks for the folder at runtime.
+Nothing checks for the package at runtime.
 
 | File | Role |
 |---|---|
